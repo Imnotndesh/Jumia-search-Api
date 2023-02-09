@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: rgb(139, 139, 139);
+        }
+        #img-container{
+            background-image: radial-gradient(rgb(207, 207, 207),rgb(150, 150, 150));
+            border-radius: 10px;
+            margin:2vh;
+        }
+        #srch-container{
+            padding: 20vw;
+        }
+        #srch-bttn{
+            border: none;
+            border-radius: 15px;
+            height: 8vh;
+            width:10vw;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color:black;
+            font-weight: 500;
+            background-color: rgba(255, 255, 255, 0.671);
+                        
+        }
+        #srch-field{
+            border: none;
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.671);
+            color: black;
+            margin-right: 10px;
+            height: 8vh;
+            width:30vw;
+            margin-left:10vw;
+            padding-left: 2vw;
+        }
+        #headerText{
+            color:white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 30px;
+            padding:0.5vh;
+            margin-left:10vw;
+        }
+    </style>
+    <title>Main</title>
+</head>
+<body>
+    <div id="img-container">
+
+        <div id="srch-container">
+
+            <h1 id="headerText">Search for the best jumia deals today!</h1>
+            <form action="findings" method="POST">
+
+                <input type="text" id="srch-field" name="item" value="" required>
+                <button type="submit" id="srch-bttn">Search</button>
+
+            </form>        
+        </div>
+
+    </div>
+</body>
+</html>
