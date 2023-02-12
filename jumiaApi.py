@@ -23,20 +23,25 @@ def fetcher():
     for prod in products:
         itemName = prod.find(class_='name')
         itemPrice = prod.find(class_='prc')
+        itemImage = prod.find(class_='img-c')
+        itemLink = prod['href']
 
         fillName = itemName.get_text()
         fillPrice = itemPrice.get_text()
-        fillLink = (f"https://www.jumia.co.ke{prod['href']}")
+        fillLink = (f"https://www.jumia.co.ke{itemLink}")
+        fillImage = itemImage['src']
+        
 
         gatheredItems = {
-            "name": fillName,
+            "Name": fillName,
             "Price": fillPrice,
-            "Link" : fillLink
+            "Link" : fillLink,
+            'Image': fillImage
         }
         
         gathered.append(gatheredItems)
 
-    return render_template('findings.html',oneItem = gathered[1],searchTerm = subSec)
+    return render_template('findings.html', results=gathered ,searchTerm=subSec)
 
 if __name__ == '__main__':
     app.run(port='5050')

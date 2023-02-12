@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>findings</title>
+    <style>
+
+    </style>
 </head>
 <body>
 <h1>Working!</h1>
 <p>You searched for: {{ searchTerm }}</p>
 <p>Here is our findings</p></br>
-<p>{{ oneItem }}</p>
+
+{% for items in results %}
+    <div id="result-ctn">
+        <img>
+        <h2 id="prodName">{{ items['Name'] }}</h2>
+        <h4 id="prodprice">{{ items['Price'] }}</h4>
+        <h5 id="prodLink">{{ items['Link'] }}</h5>
+        <h6 id="prodImg">{{ items['Image'] }}</h6>
+    </div>
+{% endfor %}
+
 </body>
 </html>
