@@ -1,5 +1,5 @@
 # Jumia-search-Api
-A small api for searching for products from the kenyan version of jumia. Written mostly in python, utilising the flask library, and HTML for the pages.
+A small tool for searching for products from the kenyan version of jumia and gives you diract links to the products and their images. Written mostly in python, utilising the flask library, and HTML for the pages.
 
 # Pre-requisites
 1. Latest version of python (can be fetched from https://www.python.org/ )
