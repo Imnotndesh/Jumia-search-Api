@@ -23,13 +23,13 @@ def fetcher():
     for prod in products:
         itemName = prod.find(class_='name')
         itemPrice = prod.find(class_='prc')
-        itemImage = prod.find(class_='img-c')
+        itemImage = prod.find(class_='img')
         itemLink = prod['href']
 
         fillName = itemName.get_text()
         fillPrice = itemPrice.get_text()
         fillLink = (f"https://www.jumia.co.ke{itemLink}")
-        fillImage = itemImage['src']
+        fillImage = itemImage['data-src']
         
 
         gatheredItems = {
